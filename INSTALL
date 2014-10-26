@@ -1,0 +1,9 @@
+Building renrencoin
+
+See doc/readme-qt.rst for instructions on building renrencoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of renrencoin.
+
+See doc/build-*.txt for instructions on building renrencoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of renrencoin.
