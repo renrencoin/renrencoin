@@ -24,11 +24,12 @@ Value getgenerate(const Array& params, bool fHelp)
 
 Value setgenerate(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2)
-        throw runtime_error(
-            "setgenerate <generate> [genproclimit]\n"
-            "<generate> is true or false to turn generation on or off.\n"
-            "Generation is limited to [genproclimit] processors, -1 is unlimited.");
+throw runtime_error("do not support setgenerate <generate> [genproclimit]\n"); 
+    //if (fHelp || params.size() < 1 || params.size() > 2)
+        // throw runtime_error(
+            // "setgenerate <generate> [genproclimit]\n"
+            // "<generate> is true or false to turn generation on or off.\n"
+            // "Generation is limited to [genproclimit] processors, -1 is unlimited.");
 
     bool fGenerate = true;
     if (params.size() > 0)
@@ -120,11 +121,16 @@ Value getnetworkhashps(const Array& params, bool fHelp)
 
 Value getworkex(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() > 2)
-        throw runtime_error(
-            "getworkex [data, coinbase]\n"
-            "If [data, coinbase] is not specified, returns extended work data.\n"
-        );
+throw runtime_error("do not support \n"); 
+    // if (fHelp || params.size() > 2)
+        // throw runtime_error(
+            // "getworkex [data, coinbase]\n"
+            // "If [data, coinbase] is not specified, returns extended work data.\n"
+        // );/ if (fHelp || params.size() > 2)
+        // throw runtime_error(
+            // "getworkex [data, coinbase]\n"
+            // "If [data, coinbase] is not specified, returns extended work data.\n"
+        // );
 
     if (vNodes.empty())
         throw JSONRPCError(-9, "renrencoin is not connected!");
@@ -250,15 +256,16 @@ Value getworkex(const Array& params, bool fHelp)
 
 Value getwork(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() > 1)
-        throw runtime_error(
-            "getwork [data]\n"
-            "If [data] is not specified, returns formatted hash data to work on:\n"
-            "  \"midstate\" : precomputed hash state after hashing the first half of the data (DEPRECATED)\n" // deprecated
-            "  \"data\" : block data\n"
-            "  \"hash1\" : formatted hash buffer for second hash (DEPRECATED)\n" // deprecated
-            "  \"target\" : little endian hash target\n"
-            "If [data] is specified, tries to solve the block and returns true if it was successful.");
+throw runtime_error("do not support \n"); 
+    // if (fHelp || params.size() > 1)
+        // throw runtime_error(
+            // "getwork [data]\n"
+            // "If [data] is not specified, returns formatted hash data to work on:\n"
+            // "  \"midstate\" : precomputed hash state after hashing the first half of the data (DEPRECATED)\n" // deprecated
+            // "  \"data\" : block data\n"
+            // "  \"hash1\" : formatted hash buffer for second hash (DEPRECATED)\n" // deprecated
+            // "  \"target\" : little endian hash target\n"
+            // "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "renrencoin is not connected!");
@@ -523,12 +530,13 @@ Value getblocktemplate(const Array& params, bool fHelp)
 
 Value submitblock(const Array& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2)
-        throw runtime_error(
-            "submitblock <hex data> [optional-params-obj]\n"
-            "[optional-params-obj] parameter is currently ignored.\n"
-            "Attempts to submit new block to network.\n"
-            "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
+throw runtime_error("do not support \n"); 
+    // if (fHelp || params.size() < 1 || params.size() > 2)
+        // throw runtime_error(
+            // "submitblock <hex data> [optional-params-obj]\n"
+            // "[optional-params-obj] parameter is currently ignored.\n"
+            // "Attempts to submit new block to network.\n"
+            // "See https://en.bitcoin.it/wiki/BIP_0022 for full specification.");
 
     vector<unsigned char> blockData(ParseHex(params[0].get_str()));
     CDataStream ssBlock(blockData, SER_NETWORK, PROTOCOL_VERSION);

@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
-
+ 
 class TransactionTableModel;
 class ClientModel;
 class WalletModel;

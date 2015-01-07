@@ -1210,22 +1210,14 @@ void ThreadDNSAddressSeed2(void* parg)
 
     printf("%d addresses found from DNS seeds\n", found);
 }
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 unsigned int pnSeed[] =
 {
-     0xbfc5d772,  //114.215.197.191 
-	0xc1c5d772 //114.215.197.193
+    0xbfc5d772,  //114.215.197.191 
+	0xc1c5d772,  //114.215.197.193
+	0x8816c779,  //79 c7 16 88 
+	0xc1ad95d3   //d3 95 ad c1 
 };
 
 void DumpAddresses()

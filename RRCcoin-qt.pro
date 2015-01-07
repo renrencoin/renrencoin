@@ -20,6 +20,8 @@ OPENSSL_INCLUDE_PATH=F:/deps/openssl-1.0.1h/include
 OPENSSL_LIB_PATH=F:/deps/openssl-1.0.1h
 MINIUPNPC_LIB_PATH=F:/deps/miniupnpc-1.8
 MINIUPNPC_INCLUDE_PATH=F:/deps/miniupnpc-1.8
+QRENCODE_INCLUDE_PATH=f:/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=f:/deps/qrencode-3.4.3/.libs
 
 OBJECTS_DIR = build
 MOC_DIR = build

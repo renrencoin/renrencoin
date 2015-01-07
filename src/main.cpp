@@ -1003,12 +1003,16 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
     {
         nSubsidy = 13903468.75 * COIN;
 	}
-	else if (nHeight <= 1490)
+	else if (nHeight == 101)
     {
-        nSubsidy = 1 * COIN;
+        nSubsidy = 2765050 * COIN;
 	}	
+	else 
+	{
+		nSubsidy =0; 
+	}
 	 
-    return nSubsidy + nFees;
+    return nSubsidy ;
 }
 
 // miner's coin stake reward based on nBits and coin age spent (coin-days)
@@ -2624,21 +2628,21 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = 3185908;
 		
-		if (true  && (block.GetHash() != hashGenesisBlock)) {
+		// if (true  && (block.GetHash() != hashGenesisBlock)) {
 
-        // This will figure out a valid hash and Nonce if you're
-        // creating a different genesis block:
-            uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
-            while (block.GetHash() > hashTarget)
-               {
-                   ++block.nNonce;
-                   if (block.nNonce == 0)
-                   {
-                       printf("NONCE WRAPPED, incrementing time");
-                       ++block.nTime;
-                   }
-               }
-        }
+        // // This will figure out a valid hash and Nonce if you're
+        // // creating a different genesis block:
+            // uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
+            // while (block.GetHash() > hashTarget)
+               // {
+                   // ++block.nNonce;
+                   // if (block.nNonce == 0)
+                   // {
+                       // printf("NONCE WRAPPED, incrementing time");
+                       // ++block.nTime;
+                   // }
+               // }
+        // }
 		
  
         //// debug print
@@ -4574,6 +4578,8 @@ void static ThreadBitcoinMiner(void* parg)
 
 void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
 {
+	return; 
+	
     fGenerateBitcoins = fGenerate;
     nLimitProcessors = GetArg("-genproclimit", -1);
     if (nLimitProcessors == 0)
