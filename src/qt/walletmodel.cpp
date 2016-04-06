@@ -277,7 +277,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(const QList<SendCoinsRecipie
     }
     if(total > 90000000.0 * COIN)
     {
-        return AmountExceedsBalance;
+        return InvalidAmount;
     }
     if((total + nTransactionFee) > nBalance)
     {

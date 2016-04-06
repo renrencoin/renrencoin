@@ -1925,7 +1925,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>The amount to pay must be larger than 0.</translation>
+        <translation>The amount to pay must be larger than 0 and smaller than 90M.</translation>
     </message>
     <message>
         <location line="+5"/>

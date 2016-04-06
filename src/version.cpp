@@ -56,7 +56,7 @@ const std::string CLIENT_NAME("renrencoin");
 
 #ifndef BUILD_DATE
 #    ifdef GIT_COMMIT_DATE
-#        define BUILD_DATE GIT_COMMIT_DATE
+#        define BUILD_DATE __DATE__ ", " __TIME__
 #    else
 #        define BUILD_DATE __DATE__ ", " __TIME__
 #    endif

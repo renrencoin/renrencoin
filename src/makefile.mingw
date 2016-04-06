@@ -2,24 +2,24 @@
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-USE_UPNP:=1
+USE_UPNP:=0
 USE_IPV6:=1
 
 BOOST_SUFFIX?=-mgw48-mt-s-1_55
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
- -I"F:/deps" \
- -I"F:/deps/boost_1_55_0" \
- -I"F:/deps/db-4.8.30.NC/build_unix" \
- -I"F:/deps/openssl-1.0.1h/include"
+ -I"C:/deps" \
+ -I"C:/deps/boost_1_55_0" \
+ -I"C:/deps/db-4.8.30.NC/build_unix" \
+ -I"C:/deps/openssl-1.0.1e/include"
  
 LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
- -L"F:/deps/miniupnpc" \
- -L"F:/deps/boost_1_55_0/stage/lib" \
- -L"F:/deps/db-4.8.30.NC/build_unix" \
- -L"F:/deps/openssl-1.0.1h"
+ -L"C:/deps/miniupnpc-1.8" \
+ -L"C:/deps/boost_1_55_0/stage/lib" \
+ -L"C:/deps/db-4.8.30.NC/build_unix" \
+ -L"C:/deps/openssl-1.0.1e"
 
 
 LIBS= \
@@ -43,8 +43,8 @@ ifndef USE_UPNP
 	override USE_UPNP = -
 endif
 ifneq (${USE_UPNP}, -)
- INCLUDEPATHS += -I"F:/miniupnpc"
- LIBPATHS += -L"F:/miniupnpc"
+ INCLUDEPATHS += -I"C:/deps/miniupnpc-1.8"
+ LIBPATHS += -L"C:/deps/miniupnpc-1.8/miniupnpc"
  LIBS += -l miniupnpc -l iphlpapi
  DEFS += -DSTATICLIB -DUSE_UPNP=$(USE_UPNP)
 endif

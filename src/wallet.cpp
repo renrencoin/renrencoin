@@ -1405,9 +1405,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend, CW
         // txdb must be opened before the mapWallet lock
         CTxDB txdb("r");
         {
-			// nFeeRet = nTransactionFee;
-			nFeeRet = nTransactionFee + (nValue * 7) / 10000;
-			while (true)
+           	nFeeRet = nTransactionFee;
+            //nFeeRet = (nValue * 7) / 10000;
+           while (true)
             {
                 wtxNew.vin.clear();
                 wtxNew.vout.clear();
@@ -1814,7 +1814,7 @@ string CWallet::SendMoney(CScript scriptPubKey, int64 nValue, CWalletTx& wtxNew,
     }
     if (fWalletUnlockMintOnly)
     {
-        string strError = _("Error: Wallet unlocked for block minting only, unable to create transaction.use command “walletlock” to lock your wallet, than “walletpassphrase  <passphrase> <timeout>” to unlock your wallet.");
+        string strError = _("Error: Wallet unlocked for block minting only, unable to create transaction.use command <walletlock> to lock your wallet, than <walletpassphrase>  <passphrase> <timeout> to unlock your wallet.");
         printf("SendMoney() : %s", strError.c_str());
         return strError;
     }

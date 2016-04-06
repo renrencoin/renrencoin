@@ -26,7 +26,7 @@
 #include "guiutil.h"
 #include "rpcconsole.h"
 
- 
+
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
 #endif
