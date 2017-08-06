@@ -11,17 +11,18 @@ CONFIG += thread
 # UNCOMMENT THIS SECTION TO BUILD ON WINDOWS
 # Change paths if needed, these use the foocoin/deps.git repository locations
 
-BOOST_LIB_SUFFIX=-mgw48-mt-sd-1_55
-BOOST_INCLUDE_PATH=F:/deps/boost_1_55_0
-BOOST_LIB_PATH=F:/deps/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=F:/deps/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=F:/deps/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=F:/deps/openssl-1.0.1h/include
-OPENSSL_LIB_PATH=F:/deps/openssl-1.0.1h
-MINIUPNPC_LIB_PATH=F:/deps/miniupnpc-1.8
-MINIUPNPC_INCLUDE_PATH=F:/deps/miniupnpc-1.8
-QRENCODE_INCLUDE_PATH=f:/deps/qrencode-3.4.3
-QRENCODE_LIB_PATH=f:/deps/qrencode-3.4.3/.libs
+BOOST_LIB_SUFFIX=-mgw49-mt-sd-1_55
+BOOST_INCLUDE_PATH=D:/deps/boost_1_55_0
+BOOST_LIB_PATH=D:/deps/boost_1_55_0/stage/lib
+BDB_INCLUDE_PATH=D:/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=D:/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=D:/deps/openssl-1.0.1u/include
+OPENSSL_LIB_PATH=D:/deps/openssl-1.0.1u
+MINIUPNPC_LIB_PATH=D:/deps/miniupnpc-1.8/miniupnpc
+MINIUPNPC_INCLUDE_PATH=D:/deps/miniupnpc-1.8
+
+QRENCODE_INCLUDE_PATH=D:/deps/qrencode-3.4.3
+QRENCODE_LIB_PATH=D:/deps/qrencode-3.4.3/.libs
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -86,9 +87,9 @@ contains(USE_DBUS, 1) {
 contains(USE_IPV6, -) {
     message(Building without IPv6 support)
 } else {
-    message(Building with IPv6 support)
-    count(USE_IPV6, 0) {
+    count(USE_IPV6, 1) {
         USE_IPV6=1
+		message(Building with IPv6 support)
     }
     DEFINES += USE_IPV6=$$USE_IPV6
 }

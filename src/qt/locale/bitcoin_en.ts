@@ -4,39 +4,14 @@
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
-    <message>
-        <source>About BottleCaps</source>
-        <translation type="obsolete">About BottleCaps</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;BottleCaps&lt;/b&gt; version</source>
-        <translation type="obsolete">&lt;b&gt;BottleCaps&lt;/b&gt; version</translation>
-    </message>
-    <message>
-        <source>Copyright © 2009-2012 The BottleCaps developers</source>
-        <translation type="obsolete">Copyright © 2009-2012 The BottleCaps developers</translation>
-    </message>
-    <message>
-        <source>
-This is experimental software.
 
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
-        <translation type="obsolete">
-This is experimental software.
-
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</translation>
-    </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About renrencoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>&lt;b&gt;renrencoin&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>

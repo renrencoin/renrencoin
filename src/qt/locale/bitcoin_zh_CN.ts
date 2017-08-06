@@ -66,7 +66,8 @@ This product includes software developed by the OpenSSL Project for use in the O
 
 在MIT/X11软件授权下发行。详见附带文件副本或 http://www.opensource.org/licenses/mit-license.php.
 
-本产品包含由OpenSSL项目开发的软件，以在 OpenSSL Toolkit (http://www.openssl.org) 中使用，以及Eric Young（eay@cryptsoft.com）所写的加密软件和Thomas Bernard所写的UPnP软件。</translation>
+本产品包含由OpenSSL项目开发的软件，以在 OpenSSL Toolkit (http://www.openssl.org) 中使用，以及Eric Young（eay@cryptsoft.com）所写的加密软件和Thomas Bernard所写的UPnP软件。
+</translation>
     </message>
 </context>
 <context>
@@ -2015,7 +2016,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>支付金额必须大于0.</translation>
+        <translation>支付金额必须大于0小于9000万.</translation>
     </message>
     <message>
         <location line="+5"/>

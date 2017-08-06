@@ -1149,11 +1149,9 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    // {"www.RRC-coin.com", "www.RRC-coin.com"},
-    // {"54.193.164.68", "54.193.164.68"},
-    // {"115.29.51.156", "115.29.51.156"},
-    // {"115.28.241.156", "115.28.241.156"},
-    // {"46.51.141.123", "46.51.141.123"},
+	{"w1.rrcoins.cn", "w1.rrcoins.cn"},
+	{"w2.rrcoins.cn", "w2.rrcoins.cn"},
+	{"w3.rrcoins.cn", "w3.rrcoins.cn"}
 };
 
 void ThreadDNSAddressSeed(void* parg)
@@ -1214,10 +1212,6 @@ void ThreadDNSAddressSeed2(void* parg)
 
 unsigned int pnSeed[] =
 {
-	0x8816c779,  
-	0xad6cd772,  
-    0xbfc5d772,  
-	0xc1c5d772   
 };
 
 void DumpAddresses()
@@ -1843,13 +1837,13 @@ void StartNode(void* parg)
     // Start threads
     //
 
-/*
+ 
     if (!GetBoolArg("-dnsseed", true))
         printf("DNS seeding disabled\n");
     else
         if (!NewThread(ThreadDNSAddressSeed, NULL))
             printf("Error: NewThread(ThreadDNSAddressSeed) failed\n");
-*/
+ 
 
     if (!GetBoolArg("-dnsseed", false))
         printf("DNS seeding disabled\n");
