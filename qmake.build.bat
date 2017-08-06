@@ -1,0 +1,1 @@
+qmake USE_UPNP=- USE_QRCODE=1 USE_IPV6=- RRCcoin-qt.pro
